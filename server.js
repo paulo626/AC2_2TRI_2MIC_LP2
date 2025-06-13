@@ -54,24 +54,31 @@ app.get('/',(req,res)=>{
 
 
 app.post('/atualizar-livro',(req,res)=>{
-    const {id,novoTipo,novaURL} = req.body;
+    const {id,materia,titulo,data_entrega,data_lancamento} = req.body;
+
 
     let carroData = fs.readFileSync(carroPath,'utf-8');
     let carros = JSON.parse(carroData);
-
-    const carroIndex = carros.findIndex(carro => carro.nome.toLowerCase() === id.toLowerCase());
+    
+    const carroIndex = carros.findIndex(carro =>carro.id == id);
 
     if(carroIndex === -1){
         res.send('<h1> Livro não existente.</h1>');
         return;
     }
-
-    carros[carroIndex].tipo = novoTipo;
-    carros[carroIndex].imagem = novaURL;
+    
+    carros[carroIndex].materia = materia
+    carros[carroIndex].titulo = titulo
+    carros[carroIndex].data_entrega = data_entrega
+    carros[carroIndex].data_lancamento = data_lancamento
 
     salvarDados(carros);
 
-    res.send('<h1> Dados do livro salvo </h1>');
+    const cardsHTML = carros.map(carro=>CriarCard(carro)).join('');
+    const pageHTMLPath = path.join(__dirname,'index.html');
+    let pageHTML = fs.readFileSync(pageHTMLPath,'utf-8');
+    pageHTML = pageHTML.replace('{{cardsHtml}}',cardsHTML);
+    res.send(pageHTML)
 
 })
 

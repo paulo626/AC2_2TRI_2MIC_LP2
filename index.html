@@ -100,25 +100,31 @@
       <form action="/atualizar-livro" method="POST"> 
           <div class="modal-body">
           
+        
+            
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Número do agendamento: ${listaDeElementos[0]}</span>
+            <input name="id" value="${listaDeElementos[0]}" type="hidden" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Materia</span>
-            <input value="${listaDeElementos[1]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input name="materia" value="${listaDeElementos[1]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Titulo</span>
-            <input value="${listaDeElementos[2]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input name="titulo" value="${listaDeElementos[2]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Data Entrega</span>
-            <input value="${listaDeElementos[3]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input name="data_entrega" value="${listaDeElementos[3]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
           <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Data Publicado</span>
-            <input value="${listaDeElementos[4]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input name="data_lancamento" value="${listaDeElementos[4]}" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
           
 
