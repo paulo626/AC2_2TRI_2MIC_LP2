@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "materia": "Matemática",
+    "data_entrega": "2025-06-15",
+    "titulo": "Lista de Equações do 2º grau",
+    "data_lancamento": "2025-06-10"
+  },
+  {
+    "id": 2,
+    "materia": "Português",
+    "data_entrega": "2025-06-16",
+    "titulo": "Redação: Tema Meio Ambiente",
+    "data_lancamento": "2025-06-11"
+  },
+  {
+    "id": 3,
+    "materia": "História",
+    "data_entrega": "2025-06-17",
+    "titulo": "Trabalho sobre Revolução Francesa",
+    "data_lancamento": "2025-06-12"
+  },
+  {
+    "id": 4,
+    "materia": "Geografia",
+    "data_entrega": "2025-06-18",
+    "titulo": "Mapa das Regiões Brasileiras",
+    "data_lancamento": "2025-06-13"
+  },
+  {
+    "id": 5,
+    "materia": "Biologia",
+    "data_entrega": "2025-06-19",
+    "titulo": "Resumo: Ecossistemas",
+    "data_lancamento": "2025-06-14"
+  },
+  {
+    "id": 6,
+    "materia": "Física",
+    "data_entrega": "2025-06-20",
+    "titulo": "Lista de exercícios de Cinemática",
+    "data_lancamento": "2025-06-15"
+  },
+  {
+    "id": 7,
+    "materia": "Química",
+    "data_entrega": "2025-06-21",
+    "titulo": "Experimento de pH",
+    "data_lancamento": "2025-06-16"
+  },
+  {
+    "id": 8,
+    "materia": "Inglês",
+    "data_entrega": "2025-06-22",
+    "titulo": "Apresentação sobre Filmes",
+    "data_lancamento": "2025-06-17"
+  },
+  {
+    "id": 9,
+    "materia": "Espanhol",
+    "data_entrega": "2025-06-23",
+    "titulo": "Tradução de texto jornalístico",
+    "data_lancamento": "2025-06-18"
+  },
+  {
+    "id": 10,
+    "materia": "Educação Física",
+    "data_entrega": "2025-06-24",
+    "titulo": "Diário de Atividades Físicas",
+    "data_lancamento": "2025-06-19"
+  },
+  {
+    "id": 11,
+    "materia": "Artes",
+    "data_entrega": "2025-06-25",
+    "titulo": "Projeto: Pintura Cubista",
+    "data_lancamento": "2025-06-20"
+  },
+  {
+    "id": 12,
+    "materia": "Matemática",
+    "data_entrega": "2025-06-26",
+    "titulo": "Gráficos e Funções",
+    "data_lancamento": "2025-06-21"
+  },
+  {
+    "id": 13,
+    "materia": "Português",
+    "data_entrega": "2025-06-27",
+    "titulo": "Análise Sintática",
+    "data_lancamento": "2025-06-22"
+  },
+  {
+    "id": 14,
+    "materia": "História",
+    "data_entrega": "2025-06-28",
+    "titulo": "Resumo sobre Guerra Fria",
+    "data_lancamento": "2025-06-23"
+  },
+  {
+    "id": 15,
+    "materia": "Geografia",
+    "data_entrega": "2025-06-29",
+    "titulo": "Impactos ambientais urbanos",
+    "data_lancamento": "2025-06-24"
+  },
+  {
+    "id": 16,
+    "materia": "Biologia",
+    "data_entrega": "2025-06-30",
+    "titulo": "Árvores genealógicas genéticas",
+    "data_lancamento": "2025-06-25"
+  },
+  {
+    "id": 17,
+    "materia": "Física",
+    "data_entrega": "2025-07-01",
+    "titulo": "Forças e Leis de Newton",
+    "data_lancamento": "2025-06-26"
+  },
+  {
+    "id": 18,
+    "materia": "Química",
+    "data_entrega": "2025-07-02",
+    "titulo": "Tabela Periódica Interativa",
+    "data_lancamento": "2025-06-27"
+  },
+  {
+    "id": 19,
+    "materia": "Inglês",
+    "data_entrega": "2025-07-03",
+    "titulo": "Debate: Global Warming",
+    "data_lancamento": "2025-06-28"
+  },
+  {
+    "id": 20,
+    "materia": "Espanhol",
+    "data_entrega": "2025-07-04",
+    "titulo": "Cartaz sobre Cultura Hispânica",
+    "data_lancamento": "2025-06-29"
+  },
+  {
+    "id": 21,
+    "materia": "Educação Física",
+    "data_entrega": "2025-07-05",
+    "titulo": "Pesquisa sobre esportes olímpicos",
+    "data_lancamento": "2025-06-30"
+  },
+  {
+    "id": 22,
+    "materia": "Artes",
+    "data_entrega": "2025-07-06",
+    "titulo": "Análise de Obra de Arte",
+    "data_lancamento": "2025-07-01"
+  },
+  {
+    "id": 23,
+    "materia": "Matemática",
+    "data_entrega": "2025-07-07",
+    "titulo": "Prova de Geometria",
+    "data_lancamento": "2025-07-02"
+  },
+  {
+    "id": 24,
+    "materia": "Português",
+    "data_entrega": "2025-07-08",
+    "titulo": "Seminário: Literatura Brasileira",
+    "data_lancamento": "2025-07-03"
+  },
+  {
+    "id": 25,
+    "materia": "História",
+    "data_entrega": "2025-07-09",
+    "titulo": "Linha do tempo do Brasil Império",
+    "data_lancamento": "2025-07-04"
+  }
+]
