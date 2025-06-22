@@ -29,7 +29,7 @@ function CriarCard(carro){
       <td class="item_${carro.id}">${carro.data_lancamento}</td>
       <td><button onclick="EditarElemento(${carro.id})" type="button" class="btn btn-primary">Editar</button></td>
       
-      <td><button data-bs-toggle="modal" data-bs-target="#Excluir" type="button" class="btn btn-danger">Excluir</button></td>
+      <td><button onclick="elimeinarElemento(${carro.id})" type="button" class="btn btn-danger">Excluir</button></td>
     </tr>
         `
 }
@@ -61,11 +61,6 @@ app.post('/atualizar-livro',(req,res)=>{
     let carros = JSON.parse(carroData);
     
     const carroIndex = carros.findIndex(carro =>carro.id == id);
-
-    if(carroIndex === -1){
-        res.send('<h1> Livro não existente.</h1>');
-        return;
-    }
     
     carros[carroIndex].materia = materia
     carros[carroIndex].titulo = titulo
@@ -131,18 +126,26 @@ app.post('/excluir-livro',(req,res) =>{
 
 //Rota para confirmar a exclusão  do carro apos a confirmação do usuario
 
-app.get('/excluir-livro-confirmado',(req,res) =>{
-    const id = req.query.nome;
+app.post('/excluir-livro-confirmado',(req,res) =>{
+    console.log("chegou aqui")
+    const id = req.query.id;
+    console.log(id)
 
     let carroData = fs.readFileSync(carroPath,'utf-8');
     let carros = JSON.parse(carroData);
 
 
-    const carroIndex = carros.findIndex(carro => carro.nome.toLowerCase() === id.toLowerCase());
-    carros.splice(carroIndex,1);
+    const carroIndex = carros.findIndex(carro => carro.id == id);
+ carros.splice(carroIndex,1);
     salvarDados(carros);
-    console.log(`livro ${id} excluido mano`)
-    res.send(`<h1>O livro ${id} foi excluído com sucesso!</h1>`)
+
+    const cardsHTML = carros.map(carro=>CriarCard(carro)).join('');
+    const pageHTMLPath = path.join(__dirname,'index.html');
+    let pageHTML = fs.readFileSync(pageHTMLPath,'utf-8');
+    pageHTML = pageHTML.replace('{{cardsHtml}}',cardsHTML);
+    res.send(pageHTML)
+    
+
 });
 
 app.listen(port,() =>{
