@@ -82,16 +82,19 @@ app.post('/adicionar-livro',(req,res) => {
     let carros = JSON.parse(carroData);
 
     const novoCarro = req.body;
-    if(carros.find(carro => carro.nome.toLowerCase() === novoCarro.nome.toLowerCase())){
-        res.send('<h1> Livro ja existe. Não colocamos duplicado</h1>');
-        return;
-    }
+
+    
 
     carros.push(novoCarro);
 
     salvarDados(carros);
 
-    res.send('<h1>Livro adicionado com sucesso</h1>')
+     const cardsHTML = carros.map(carro=>CriarCard(carro)).join('');
+    const pageHTMLPath = path.join(__dirname,'index.html');
+    let pageHTML = fs.readFileSync(pageHTMLPath,'utf-8');
+    pageHTML = pageHTML.replace('{{cardsHtml}}',cardsHTML);
+    res.send(pageHTML)
+
 })
 
 app.post('/excluir-livro',(req,res) =>{
